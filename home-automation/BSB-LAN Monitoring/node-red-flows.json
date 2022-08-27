@@ -1,0 +1,3144 @@
+[
+    {
+        "id": "0fbc0c3335eca364",
+        "type": "mqtt in",
+        "z": "f0180303220ffef7",
+        "name": "700 - Heating 1 operating mode",
+        "topic": "BSB-LAN/700",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "4e15f386.2f0cfd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 190,
+        "y": 1020,
+        "wires": [
+            [
+                "7274a4d9d37f162f"
+            ]
+        ]
+    },
+    {
+        "id": "d3ff0dcc370629c1",
+        "type": "function",
+        "z": "f0180303220ffef7",
+        "name": "Set Tag/Value",
+        "func": "msg.measurement = '700_heating1_mode';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 1020,
+        "wires": [
+            [
+                "3e9d9d2a2811d0f8"
+            ]
+        ]
+    },
+    {
+        "id": "a1d40f13b8681d46",
+        "type": "mqtt in",
+        "z": "f0180303220ffef7",
+        "name": "500 - Time Heating 1 Mo",
+        "topic": "BSB-LAN/500",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "4e15f386.2f0cfd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 170,
+        "y": 60,
+        "wires": [
+            [
+                "f6e7918bed2c2b97"
+            ]
+        ]
+    },
+    {
+        "id": "f6e7918bed2c2b97",
+        "type": "json",
+        "z": "f0180303220ffef7",
+        "name": "",
+        "property": "payload",
+        "action": "str",
+        "pretty": false,
+        "x": 490,
+        "y": 60,
+        "wires": [
+            [
+                "1f5f7f8fc657565a"
+            ]
+        ]
+    },
+    {
+        "id": "1f5f7f8fc657565a",
+        "type": "function",
+        "z": "f0180303220ffef7",
+        "name": "Set Tag/Value",
+        "func": "msg.measurement = '500_heating1_time_mo';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 60,
+        "wires": [
+            [
+                "51a644e60363c6ee"
+            ]
+        ]
+    },
+    {
+        "id": "51a644e60363c6ee",
+        "type": "influxdb out",
+        "z": "f0180303220ffef7",
+        "influxdb": "8f15d5a71ce42ae7",
+        "name": "Output to InfluxDB",
+        "measurement": "",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1150,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "8ab112eb81d43293",
+        "type": "mqtt in",
+        "z": "f0180303220ffef7",
+        "name": "501 - Time Heating 1 Tu",
+        "topic": "BSB-LAN/501",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "4e15f386.2f0cfd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 160,
+        "y": 120,
+        "wires": [
+            [
+                "c5da45dfea8012db"
+            ]
+        ]
+    },
+    {
+        "id": "c5da45dfea8012db",
+        "type": "json",
+        "z": "f0180303220ffef7",
+        "name": "",
+        "property": "payload",
+        "action": "str",
+        "pretty": false,
+        "x": 490,
+        "y": 120,
+        "wires": [
+            [
+                "831eda687be1a1cf"
+            ]
+        ]
+    },
+    {
+        "id": "831eda687be1a1cf",
+        "type": "function",
+        "z": "f0180303220ffef7",
+        "name": "Set Tag/Value",
+        "func": "msg.measurement = '501_heating1_time_tu';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 120,
+        "wires": [
+            [
+                "51a644e60363c6ee"
+            ]
+        ]
+    },
+    {
+        "id": "056422ef07dce520",
+        "type": "mqtt in",
+        "z": "f0180303220ffef7",
+        "name": "502 - Time Heating 1 We",
+        "topic": "BSB-LAN/502",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "4e15f386.2f0cfd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 170,
+        "y": 180,
+        "wires": [
+            [
+                "0f5f268ab07f44a6"
+            ]
+        ]
+    },
+    {
+        "id": "0f5f268ab07f44a6",
+        "type": "json",
+        "z": "f0180303220ffef7",
+        "name": "",
+        "property": "payload",
+        "action": "str",
+        "pretty": false,
+        "x": 490,
+        "y": 180,
+        "wires": [
+            [
+                "898d62b44f12b823"
+            ]
+        ]
+    },
+    {
+        "id": "898d62b44f12b823",
+        "type": "function",
+        "z": "f0180303220ffef7",
+        "name": "Set Tag/Value",
+        "func": "msg.measurement = '502_heating1_time_we';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 180,
+        "wires": [
+            [
+                "51a644e60363c6ee"
+            ]
+        ]
+    },
+    {
+        "id": "62c911b3bc580148",
+        "type": "mqtt in",
+        "z": "f0180303220ffef7",
+        "name": "503 - Time Heating 1 Th",
+        "topic": "BSB-LAN/503",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "4e15f386.2f0cfd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 160,
+        "y": 240,
+        "wires": [
+            [
+                "6ff568f60591bf82"
+            ]
+        ]
+    },
+    {
+        "id": "6ff568f60591bf82",
+        "type": "json",
+        "z": "f0180303220ffef7",
+        "name": "",
+        "property": "payload",
+        "action": "str",
+        "pretty": false,
+        "x": 490,
+        "y": 240,
+        "wires": [
+            [
+                "a8bf68664f2d6429"
+            ]
+        ]
+    },
+    {
+        "id": "a8bf68664f2d6429",
+        "type": "function",
+        "z": "f0180303220ffef7",
+        "name": "Set Tag/Value",
+        "func": "msg.measurement = '503_heating1_time_th';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 240,
+        "wires": [
+            [
+                "51a644e60363c6ee"
+            ]
+        ]
+    },
+    {
+        "id": "30c6a3528788c057",
+        "type": "mqtt in",
+        "z": "f0180303220ffef7",
+        "name": "504 - Time Heating 1 FR",
+        "topic": "BSB-LAN/504",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "4e15f386.2f0cfd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 170,
+        "y": 300,
+        "wires": [
+            [
+                "5595286cbac4d829"
+            ]
+        ]
+    },
+    {
+        "id": "5595286cbac4d829",
+        "type": "json",
+        "z": "f0180303220ffef7",
+        "name": "",
+        "property": "payload",
+        "action": "str",
+        "pretty": false,
+        "x": 490,
+        "y": 300,
+        "wires": [
+            [
+                "fb53c215a6537f33"
+            ]
+        ]
+    },
+    {
+        "id": "fb53c215a6537f33",
+        "type": "function",
+        "z": "f0180303220ffef7",
+        "name": "Set Tag/Value",
+        "func": "msg.measurement = '504_heating1_time_fr';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 300,
+        "wires": [
+            [
+                "51a644e60363c6ee"
+            ]
+        ]
+    },
+    {
+        "id": "9157501622351638",
+        "type": "mqtt in",
+        "z": "f0180303220ffef7",
+        "name": "505 - Time Heating 1 Sa",
+        "topic": "BSB-LAN/505",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "4e15f386.2f0cfd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 170,
+        "y": 360,
+        "wires": [
+            [
+                "98efaf5d03e0d316"
+            ]
+        ]
+    },
+    {
+        "id": "98efaf5d03e0d316",
+        "type": "json",
+        "z": "f0180303220ffef7",
+        "name": "",
+        "property": "payload",
+        "action": "str",
+        "pretty": false,
+        "x": 490,
+        "y": 360,
+        "wires": [
+            [
+                "1bb26a53cd787802"
+            ]
+        ]
+    },
+    {
+        "id": "1bb26a53cd787802",
+        "type": "function",
+        "z": "f0180303220ffef7",
+        "name": "Set Tag/Value",
+        "func": "msg.measurement = '505_heating1_time_sa';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 360,
+        "wires": [
+            [
+                "51a644e60363c6ee"
+            ]
+        ]
+    },
+    {
+        "id": "a3d105c33cda8988",
+        "type": "mqtt in",
+        "z": "f0180303220ffef7",
+        "name": "506 - Time Heating 1 Su",
+        "topic": "BSB-LAN/506",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "4e15f386.2f0cfd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 170,
+        "y": 420,
+        "wires": [
+            [
+                "84fb546f21776ff8"
+            ]
+        ]
+    },
+    {
+        "id": "84fb546f21776ff8",
+        "type": "json",
+        "z": "f0180303220ffef7",
+        "name": "",
+        "property": "payload",
+        "action": "str",
+        "pretty": false,
+        "x": 490,
+        "y": 420,
+        "wires": [
+            [
+                "86e79062fbb72697"
+            ]
+        ]
+    },
+    {
+        "id": "86e79062fbb72697",
+        "type": "function",
+        "z": "f0180303220ffef7",
+        "name": "Set Tag/Value",
+        "func": "msg.measurement = '506_heating1_time_su';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 420,
+        "wires": [
+            [
+                "51a644e60363c6ee"
+            ]
+        ]
+    },
+    {
+        "id": "9c66ae9d4622b381",
+        "type": "mqtt in",
+        "z": "f0180303220ffef7",
+        "name": "560 - Time DHW Mo",
+        "topic": "BSB-LAN/560",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "4e15f386.2f0cfd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 150,
+        "y": 540,
+        "wires": [
+            [
+                "feb2f68b6983ef12"
+            ]
+        ]
+    },
+    {
+        "id": "feb2f68b6983ef12",
+        "type": "json",
+        "z": "f0180303220ffef7",
+        "name": "",
+        "property": "payload",
+        "action": "str",
+        "pretty": false,
+        "x": 490,
+        "y": 540,
+        "wires": [
+            [
+                "f854e7c9e303e3f3"
+            ]
+        ]
+    },
+    {
+        "id": "f854e7c9e303e3f3",
+        "type": "function",
+        "z": "f0180303220ffef7",
+        "name": "Set Tag/Value",
+        "func": "msg.measurement = '560_dhw_time_mo';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 540,
+        "wires": [
+            [
+                "51a644e60363c6ee"
+            ]
+        ]
+    },
+    {
+        "id": "58358655a1bb4747",
+        "type": "mqtt in",
+        "z": "f0180303220ffef7",
+        "name": "561 - Time DHW Tu",
+        "topic": "BSB-LAN/561",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "4e15f386.2f0cfd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 150,
+        "y": 600,
+        "wires": [
+            [
+                "337768aca03a49d8"
+            ]
+        ]
+    },
+    {
+        "id": "337768aca03a49d8",
+        "type": "json",
+        "z": "f0180303220ffef7",
+        "name": "",
+        "property": "payload",
+        "action": "str",
+        "pretty": false,
+        "x": 490,
+        "y": 600,
+        "wires": [
+            [
+                "628f8d4f60665853"
+            ]
+        ]
+    },
+    {
+        "id": "628f8d4f60665853",
+        "type": "function",
+        "z": "f0180303220ffef7",
+        "name": "Set Tag/Value",
+        "func": "msg.measurement = '561_dhw_time_tu';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 600,
+        "wires": [
+            [
+                "51a644e60363c6ee"
+            ]
+        ]
+    },
+    {
+        "id": "3dabf532be6d9c54",
+        "type": "mqtt in",
+        "z": "f0180303220ffef7",
+        "name": "562 - Time DHW We",
+        "topic": "BSB-LAN/562",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "4e15f386.2f0cfd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 150,
+        "y": 660,
+        "wires": [
+            [
+                "9ef01aa0eef2d8f9"
+            ]
+        ]
+    },
+    {
+        "id": "9ef01aa0eef2d8f9",
+        "type": "json",
+        "z": "f0180303220ffef7",
+        "name": "",
+        "property": "payload",
+        "action": "str",
+        "pretty": false,
+        "x": 490,
+        "y": 660,
+        "wires": [
+            [
+                "700ff1f0e9430bc3"
+            ]
+        ]
+    },
+    {
+        "id": "700ff1f0e9430bc3",
+        "type": "function",
+        "z": "f0180303220ffef7",
+        "name": "Set Tag/Value",
+        "func": "msg.measurement = '562_dhw_time_we';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 660,
+        "wires": [
+            [
+                "51a644e60363c6ee"
+            ]
+        ]
+    },
+    {
+        "id": "0641e958d20c7e60",
+        "type": "mqtt in",
+        "z": "f0180303220ffef7",
+        "name": "563 - Time DHW Th",
+        "topic": "BSB-LAN/563",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "4e15f386.2f0cfd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 150,
+        "y": 720,
+        "wires": [
+            [
+                "0287db1d2050e64f"
+            ]
+        ]
+    },
+    {
+        "id": "0287db1d2050e64f",
+        "type": "json",
+        "z": "f0180303220ffef7",
+        "name": "",
+        "property": "payload",
+        "action": "str",
+        "pretty": false,
+        "x": 490,
+        "y": 720,
+        "wires": [
+            [
+                "8aa463a090de6d2a"
+            ]
+        ]
+    },
+    {
+        "id": "8aa463a090de6d2a",
+        "type": "function",
+        "z": "f0180303220ffef7",
+        "name": "Set Tag/Value",
+        "func": "msg.measurement = '563_dhw_time_th';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 720,
+        "wires": [
+            [
+                "51a644e60363c6ee"
+            ]
+        ]
+    },
+    {
+        "id": "72a58598dbabfa3b",
+        "type": "mqtt in",
+        "z": "f0180303220ffef7",
+        "name": "564 - Time DHW Fr",
+        "topic": "BSB-LAN/564",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "4e15f386.2f0cfd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 150,
+        "y": 780,
+        "wires": [
+            [
+                "bbf3d222c7710597"
+            ]
+        ]
+    },
+    {
+        "id": "bbf3d222c7710597",
+        "type": "json",
+        "z": "f0180303220ffef7",
+        "name": "",
+        "property": "payload",
+        "action": "str",
+        "pretty": false,
+        "x": 490,
+        "y": 780,
+        "wires": [
+            [
+                "3f3b072d26e1843f"
+            ]
+        ]
+    },
+    {
+        "id": "3f3b072d26e1843f",
+        "type": "function",
+        "z": "f0180303220ffef7",
+        "name": "Set Tag/Value",
+        "func": "msg.measurement = '564_dhw_time_fr';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 780,
+        "wires": [
+            [
+                "51a644e60363c6ee"
+            ]
+        ]
+    },
+    {
+        "id": "95154f1149bb64ef",
+        "type": "mqtt in",
+        "z": "f0180303220ffef7",
+        "name": "565 - Time DHW Sa",
+        "topic": "BSB-LAN/565",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "4e15f386.2f0cfd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 150,
+        "y": 840,
+        "wires": [
+            [
+                "8c95e44dd9e6f102"
+            ]
+        ]
+    },
+    {
+        "id": "8c95e44dd9e6f102",
+        "type": "json",
+        "z": "f0180303220ffef7",
+        "name": "",
+        "property": "payload",
+        "action": "str",
+        "pretty": false,
+        "x": 490,
+        "y": 840,
+        "wires": [
+            [
+                "4851791f0dcccbbf"
+            ]
+        ]
+    },
+    {
+        "id": "4851791f0dcccbbf",
+        "type": "function",
+        "z": "f0180303220ffef7",
+        "name": "Set Tag/Value",
+        "func": "msg.measurement = '565_dhw_time_sa';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 840,
+        "wires": [
+            [
+                "51a644e60363c6ee"
+            ]
+        ]
+    },
+    {
+        "id": "27b344bce89614f7",
+        "type": "mqtt in",
+        "z": "f0180303220ffef7",
+        "name": "566 - Time DHW Su",
+        "topic": "BSB-LAN/566",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "4e15f386.2f0cfd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 150,
+        "y": 900,
+        "wires": [
+            [
+                "3fb563e5dcce60cf"
+            ]
+        ]
+    },
+    {
+        "id": "3fb563e5dcce60cf",
+        "type": "json",
+        "z": "f0180303220ffef7",
+        "name": "",
+        "property": "payload",
+        "action": "str",
+        "pretty": false,
+        "x": 490,
+        "y": 900,
+        "wires": [
+            [
+                "386467bdb2984d58"
+            ]
+        ]
+    },
+    {
+        "id": "386467bdb2984d58",
+        "type": "function",
+        "z": "f0180303220ffef7",
+        "name": "Set Tag/Value",
+        "func": "msg.measurement = '566_dhw_time_su';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 900,
+        "wires": [
+            [
+                "51a644e60363c6ee"
+            ]
+        ]
+    },
+    {
+        "id": "3e9d9d2a2811d0f8",
+        "type": "influxdb out",
+        "z": "f0180303220ffef7",
+        "influxdb": "8f15d5a71ce42ae7",
+        "name": "Output to InfluxDB",
+        "measurement": "",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1150,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "71c648e54043e7d1",
+        "type": "mqtt in",
+        "z": "f0180303220ffef7",
+        "name": "710 - Room temp comfort setpoint",
+        "topic": "BSB-LAN/710",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "4e15f386.2f0cfd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 200,
+        "y": 1080,
+        "wires": [
+            [
+                "97feb35bc14e169f"
+            ]
+        ]
+    },
+    {
+        "id": "e425461503221d3c",
+        "type": "function",
+        "z": "f0180303220ffef7",
+        "name": "Set Tag/Value",
+        "func": "msg.measurement = '710_comfort_set';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 1080,
+        "wires": [
+            [
+                "3e9d9d2a2811d0f8"
+            ]
+        ]
+    },
+    {
+        "id": "b9f44b6d9ace47f1",
+        "type": "mqtt in",
+        "z": "f0180303220ffef7",
+        "name": "712 - Room temp reduced setpoint",
+        "topic": "BSB-LAN/712",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "4e15f386.2f0cfd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 200,
+        "y": 1140,
+        "wires": [
+            [
+                "496df82c6ad5553d"
+            ]
+        ]
+    },
+    {
+        "id": "c028429f9704460f",
+        "type": "function",
+        "z": "f0180303220ffef7",
+        "name": "Set Tag/Value",
+        "func": "msg.measurement = '712_reduced_set';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 1140,
+        "wires": [
+            [
+                "3e9d9d2a2811d0f8"
+            ]
+        ]
+    },
+    {
+        "id": "ad35caee91da5213",
+        "type": "mqtt in",
+        "z": "f0180303220ffef7",
+        "name": "730 - Summer/Winter changeover temp",
+        "topic": "BSB-LAN/730",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "4e15f386.2f0cfd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 210,
+        "y": 1200,
+        "wires": [
+            [
+                "da6b7e41824d20aa"
+            ]
+        ]
+    },
+    {
+        "id": "7a59d45c5f899f55",
+        "type": "function",
+        "z": "f0180303220ffef7",
+        "name": "Set Tag/Value",
+        "func": "msg.measurement = '730_switchover_temp';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 1200,
+        "wires": [
+            [
+                "3e9d9d2a2811d0f8"
+            ]
+        ]
+    },
+    {
+        "id": "a75788743bffb844",
+        "type": "mqtt in",
+        "z": "f0180303220ffef7",
+        "name": "740 - Flow temp min",
+        "topic": "BSB-LAN/740",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "4e15f386.2f0cfd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 150,
+        "y": 1260,
+        "wires": [
+            [
+                "975d29228b41be90"
+            ]
+        ]
+    },
+    {
+        "id": "66d3ecdd4d7d70f9",
+        "type": "function",
+        "z": "f0180303220ffef7",
+        "name": "Set Tag/Value",
+        "func": "msg.measurement = '740_flow_temp_min';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 1260,
+        "wires": [
+            [
+                "3e9d9d2a2811d0f8"
+            ]
+        ]
+    },
+    {
+        "id": "eb7684310b75b7b3",
+        "type": "mqtt in",
+        "z": "f0180303220ffef7",
+        "name": "741 - Flow temp max",
+        "topic": "BSB-LAN/741",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "4e15f386.2f0cfd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 160,
+        "y": 1320,
+        "wires": [
+            [
+                "3989ee5e9902f7f2"
+            ]
+        ]
+    },
+    {
+        "id": "b2f0521316682562",
+        "type": "function",
+        "z": "f0180303220ffef7",
+        "name": "Set Tag/Value",
+        "func": "msg.measurement = '741_flow_temp_max';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 1320,
+        "wires": [
+            [
+                "3e9d9d2a2811d0f8"
+            ]
+        ]
+    },
+    {
+        "id": "9786796a58769b15",
+        "type": "change",
+        "z": "f0180303220ffef7",
+        "name": "string to obj",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "test",
+                "tot": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "payload",
+                "pt": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.temperature",
+                "pt": "msg",
+                "to": "test",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 1080,
+        "wires": [
+            [
+                "e425461503221d3c"
+            ]
+        ]
+    },
+    {
+        "id": "62402e8f3e65327a",
+        "type": "change",
+        "z": "f0180303220ffef7",
+        "name": "string to obj",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "test",
+                "tot": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "payload",
+                "pt": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.temperature",
+                "pt": "msg",
+                "to": "test",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 1140,
+        "wires": [
+            [
+                "c028429f9704460f"
+            ]
+        ]
+    },
+    {
+        "id": "4fe3b49d3565a68a",
+        "type": "change",
+        "z": "f0180303220ffef7",
+        "name": "string to obj",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "test",
+                "tot": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "payload",
+                "pt": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.temperature",
+                "pt": "msg",
+                "to": "test",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 1200,
+        "wires": [
+            [
+                "7a59d45c5f899f55"
+            ]
+        ]
+    },
+    {
+        "id": "a1b256be59b8f065",
+        "type": "change",
+        "z": "f0180303220ffef7",
+        "name": "string to obj",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "test",
+                "tot": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "payload",
+                "pt": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.temperature",
+                "pt": "msg",
+                "to": "test",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 1260,
+        "wires": [
+            [
+                "66d3ecdd4d7d70f9"
+            ]
+        ]
+    },
+    {
+        "id": "307a126b8027bcb1",
+        "type": "change",
+        "z": "f0180303220ffef7",
+        "name": "string to obj",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "test",
+                "tot": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "payload",
+                "pt": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.temperature",
+                "pt": "msg",
+                "to": "test",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 1320,
+        "wires": [
+            [
+                "b2f0521316682562"
+            ]
+        ]
+    },
+    {
+        "id": "3989ee5e9902f7f2",
+        "type": "json",
+        "z": "f0180303220ffef7",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 490,
+        "y": 1320,
+        "wires": [
+            [
+                "307a126b8027bcb1"
+            ]
+        ]
+    },
+    {
+        "id": "975d29228b41be90",
+        "type": "json",
+        "z": "f0180303220ffef7",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 490,
+        "y": 1260,
+        "wires": [
+            [
+                "a1b256be59b8f065"
+            ]
+        ]
+    },
+    {
+        "id": "da6b7e41824d20aa",
+        "type": "json",
+        "z": "f0180303220ffef7",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 490,
+        "y": 1200,
+        "wires": [
+            [
+                "4fe3b49d3565a68a"
+            ]
+        ]
+    },
+    {
+        "id": "496df82c6ad5553d",
+        "type": "json",
+        "z": "f0180303220ffef7",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 490,
+        "y": 1140,
+        "wires": [
+            [
+                "62402e8f3e65327a"
+            ]
+        ]
+    },
+    {
+        "id": "97feb35bc14e169f",
+        "type": "json",
+        "z": "f0180303220ffef7",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 490,
+        "y": 1080,
+        "wires": [
+            [
+                "9786796a58769b15"
+            ]
+        ]
+    },
+    {
+        "id": "7274a4d9d37f162f",
+        "type": "json",
+        "z": "f0180303220ffef7",
+        "name": "",
+        "property": "payload",
+        "action": "str",
+        "pretty": false,
+        "x": 490,
+        "y": 1020,
+        "wires": [
+            [
+                "d3ff0dcc370629c1"
+            ]
+        ]
+    },
+    {
+        "id": "84d14f330fabb320",
+        "type": "mqtt in",
+        "z": "f0180303220ffef7",
+        "name": "1610 - DHW comfort setpoint",
+        "topic": "BSB-LAN/1610",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "4e15f386.2f0cfd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 180,
+        "y": 1440,
+        "wires": [
+            [
+                "fb96a0955e7b1f5f"
+            ]
+        ]
+    },
+    {
+        "id": "7e7dfcf7af6a03de",
+        "type": "function",
+        "z": "f0180303220ffef7",
+        "name": "Set Tag/Value",
+        "func": "msg.measurement = '1610_dhw_comfort_set';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 1440,
+        "wires": [
+            [
+                "3e9d9d2a2811d0f8"
+            ]
+        ]
+    },
+    {
+        "id": "9be56bde7724cda9",
+        "type": "change",
+        "z": "f0180303220ffef7",
+        "name": "string to obj",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "test",
+                "tot": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "payload",
+                "pt": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.temperature",
+                "pt": "msg",
+                "to": "test",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 1440,
+        "wires": [
+            [
+                "7e7dfcf7af6a03de"
+            ]
+        ]
+    },
+    {
+        "id": "fb96a0955e7b1f5f",
+        "type": "json",
+        "z": "f0180303220ffef7",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 490,
+        "y": 1440,
+        "wires": [
+            [
+                "9be56bde7724cda9"
+            ]
+        ]
+    },
+    {
+        "id": "9bbaddbfe8a7bfbb",
+        "type": "mqtt in",
+        "z": "f0180303220ffef7",
+        "name": "1612 - DHW reduced setpoint",
+        "topic": "BSB-LAN/1610",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "4e15f386.2f0cfd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 180,
+        "y": 1500,
+        "wires": [
+            [
+                "323953c0d612d705"
+            ]
+        ]
+    },
+    {
+        "id": "9c7931742c05dbed",
+        "type": "function",
+        "z": "f0180303220ffef7",
+        "name": "Set Tag/Value",
+        "func": "msg.measurement = '1612_dhw_reduced_set';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 1500,
+        "wires": [
+            [
+                "3e9d9d2a2811d0f8"
+            ]
+        ]
+    },
+    {
+        "id": "22918dad1fc03c7a",
+        "type": "change",
+        "z": "f0180303220ffef7",
+        "name": "string to obj",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "test",
+                "tot": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "payload",
+                "pt": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.temperature",
+                "pt": "msg",
+                "to": "test",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 1500,
+        "wires": [
+            [
+                "9c7931742c05dbed"
+            ]
+        ]
+    },
+    {
+        "id": "323953c0d612d705",
+        "type": "json",
+        "z": "f0180303220ffef7",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 490,
+        "y": 1500,
+        "wires": [
+            [
+                "22918dad1fc03c7a"
+            ]
+        ]
+    },
+    {
+        "id": "d7b3174ae7c61b38",
+        "type": "mqtt in",
+        "z": "f0180303220ffef7",
+        "name": "1640 - DHW legionella",
+        "topic": "BSB-LAN/1640",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "4e15f386.2f0cfd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 160,
+        "y": 1560,
+        "wires": [
+            [
+                "b7b274b97dcc3855"
+            ]
+        ]
+    },
+    {
+        "id": "c45e41a0d88fdf80",
+        "type": "function",
+        "z": "f0180303220ffef7",
+        "name": "Set Tag/Value",
+        "func": "msg.measurement = '1640_dhw_legionella';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 1560,
+        "wires": [
+            [
+                "3e9d9d2a2811d0f8"
+            ]
+        ]
+    },
+    {
+        "id": "b7b274b97dcc3855",
+        "type": "json",
+        "z": "f0180303220ffef7",
+        "name": "",
+        "property": "payload",
+        "action": "str",
+        "pretty": false,
+        "x": 490,
+        "y": 1560,
+        "wires": [
+            [
+                "c45e41a0d88fdf80"
+            ]
+        ]
+    },
+    {
+        "id": "7eecb049b6de28e8",
+        "type": "mqtt in",
+        "z": "f0180303220ffef7",
+        "name": "1642 - DHW legionella day",
+        "topic": "BSB-LAN/1642",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "4e15f386.2f0cfd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 170,
+        "y": 1620,
+        "wires": [
+            [
+                "4fe83c4284723dd1"
+            ]
+        ]
+    },
+    {
+        "id": "f9a751939404df8a",
+        "type": "function",
+        "z": "f0180303220ffef7",
+        "name": "Set Tag/Value",
+        "func": "msg.measurement = '1642_dhw_legionella_day';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 1620,
+        "wires": [
+            [
+                "3e9d9d2a2811d0f8"
+            ]
+        ]
+    },
+    {
+        "id": "4fe83c4284723dd1",
+        "type": "json",
+        "z": "f0180303220ffef7",
+        "name": "",
+        "property": "payload",
+        "action": "str",
+        "pretty": false,
+        "x": 490,
+        "y": 1620,
+        "wires": [
+            [
+                "f9a751939404df8a"
+            ]
+        ]
+    },
+    {
+        "id": "38ce2dad94b0e319",
+        "type": "mqtt in",
+        "z": "f0180303220ffef7",
+        "name": "1644 - DHW legionella day",
+        "topic": "BSB-LAN/1644",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "4e15f386.2f0cfd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 170,
+        "y": 1680,
+        "wires": [
+            [
+                "fde783564377e959"
+            ]
+        ]
+    },
+    {
+        "id": "2cbc00d698d7b115",
+        "type": "function",
+        "z": "f0180303220ffef7",
+        "name": "Set Tag/Value",
+        "func": "msg.measurement = '1644_dhw_legionella_time';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 1680,
+        "wires": [
+            [
+                "3e9d9d2a2811d0f8"
+            ]
+        ]
+    },
+    {
+        "id": "fde783564377e959",
+        "type": "json",
+        "z": "f0180303220ffef7",
+        "name": "",
+        "property": "payload",
+        "action": "str",
+        "pretty": false,
+        "x": 490,
+        "y": 1680,
+        "wires": [
+            [
+                "2cbc00d698d7b115"
+            ]
+        ]
+    },
+    {
+        "id": "9dd4e6e1c621ba94",
+        "type": "mqtt in",
+        "z": "f0180303220ffef7",
+        "name": "1645 - DHW legionella setpoint",
+        "topic": "BSB-LAN/1645",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "4e15f386.2f0cfd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 190,
+        "y": 1740,
+        "wires": [
+            [
+                "d2923bcd2097dccd"
+            ]
+        ]
+    },
+    {
+        "id": "9ab92d3a57cf0d89",
+        "type": "function",
+        "z": "f0180303220ffef7",
+        "name": "Set Tag/Value",
+        "func": "msg.measurement = '1645_dhw_legionella_setpoint';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 1740,
+        "wires": [
+            [
+                "3e9d9d2a2811d0f8"
+            ]
+        ]
+    },
+    {
+        "id": "b9c75cd51d59a2b6",
+        "type": "change",
+        "z": "f0180303220ffef7",
+        "name": "string to obj",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "test",
+                "tot": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "payload",
+                "pt": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.temperature",
+                "pt": "msg",
+                "to": "test",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 1740,
+        "wires": [
+            [
+                "9ab92d3a57cf0d89"
+            ]
+        ]
+    },
+    {
+        "id": "d2923bcd2097dccd",
+        "type": "json",
+        "z": "f0180303220ffef7",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 490,
+        "y": 1740,
+        "wires": [
+            [
+                "b9c75cd51d59a2b6"
+            ]
+        ]
+    },
+    {
+        "id": "7a2f0fb395364c9b",
+        "type": "mqtt in",
+        "z": "f0180303220ffef7",
+        "name": "8700 - Local outside temp",
+        "topic": "BSB-LAN/8700",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "4e15f386.2f0cfd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 170,
+        "y": 1860,
+        "wires": [
+            [
+                "a344c5520d9a7309"
+            ]
+        ]
+    },
+    {
+        "id": "630d4b3eadafd641",
+        "type": "function",
+        "z": "f0180303220ffef7",
+        "name": "Set Tag/Value",
+        "func": "msg.measurement = '8700_outside_temp';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 1860,
+        "wires": [
+            [
+                "96bf8777460283f7"
+            ]
+        ]
+    },
+    {
+        "id": "a344c5520d9a7309",
+        "type": "json",
+        "z": "f0180303220ffef7",
+        "name": "",
+        "property": "payload",
+        "action": "str",
+        "pretty": false,
+        "x": 490,
+        "y": 1860,
+        "wires": [
+            [
+                "d1e7565525fd242c"
+            ]
+        ]
+    },
+    {
+        "id": "96bf8777460283f7",
+        "type": "influxdb out",
+        "z": "f0180303220ffef7",
+        "influxdb": "8f15d5a71ce42ae7",
+        "name": "Output to InfluxDB",
+        "measurement": "",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1150,
+        "y": 1860,
+        "wires": []
+    },
+    {
+        "id": "d1e7565525fd242c",
+        "type": "change",
+        "z": "f0180303220ffef7",
+        "name": "string to obj",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "test",
+                "tot": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "payload",
+                "pt": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.temperature",
+                "pt": "msg",
+                "to": "test",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 1860,
+        "wires": [
+            [
+                "630d4b3eadafd641"
+            ]
+        ]
+    },
+    {
+        "id": "60439588b872a784",
+        "type": "mqtt in",
+        "z": "f0180303220ffef7",
+        "name": "8701 - Local outside temp min",
+        "topic": "BSB-LAN/8701",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "4e15f386.2f0cfd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 180,
+        "y": 1920,
+        "wires": [
+            [
+                "68dc6157fb8a849b"
+            ]
+        ]
+    },
+    {
+        "id": "c0a62d8c2d56844f",
+        "type": "function",
+        "z": "f0180303220ffef7",
+        "name": "Set Tag/Value",
+        "func": "msg.measurement = '8701_outside_temp_min';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 1920,
+        "wires": [
+            [
+                "96bf8777460283f7"
+            ]
+        ]
+    },
+    {
+        "id": "68dc6157fb8a849b",
+        "type": "json",
+        "z": "f0180303220ffef7",
+        "name": "",
+        "property": "payload",
+        "action": "str",
+        "pretty": false,
+        "x": 490,
+        "y": 1920,
+        "wires": [
+            [
+                "01b86fdd40b552ef"
+            ]
+        ]
+    },
+    {
+        "id": "01b86fdd40b552ef",
+        "type": "change",
+        "z": "f0180303220ffef7",
+        "name": "string to obj",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "test",
+                "tot": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "payload",
+                "pt": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.temperature",
+                "pt": "msg",
+                "to": "test",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 1920,
+        "wires": [
+            [
+                "c0a62d8c2d56844f"
+            ]
+        ]
+    },
+    {
+        "id": "2a818ba14b15faac",
+        "type": "mqtt in",
+        "z": "f0180303220ffef7",
+        "name": "8702 - Local outside temp max",
+        "topic": "BSB-LAN/8702",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "4e15f386.2f0cfd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 190,
+        "y": 1980,
+        "wires": [
+            [
+                "245a9cc74621adba"
+            ]
+        ]
+    },
+    {
+        "id": "06ee1268326505c7",
+        "type": "function",
+        "z": "f0180303220ffef7",
+        "name": "Set Tag/Value",
+        "func": "msg.measurement = '8702_outside_temp_max';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 1980,
+        "wires": [
+            [
+                "96bf8777460283f7"
+            ]
+        ]
+    },
+    {
+        "id": "245a9cc74621adba",
+        "type": "json",
+        "z": "f0180303220ffef7",
+        "name": "",
+        "property": "payload",
+        "action": "str",
+        "pretty": false,
+        "x": 490,
+        "y": 1980,
+        "wires": [
+            [
+                "6f244f04d0dd9267"
+            ]
+        ]
+    },
+    {
+        "id": "6f244f04d0dd9267",
+        "type": "change",
+        "z": "f0180303220ffef7",
+        "name": "string to obj",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "test",
+                "tot": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "payload",
+                "pt": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.temperature",
+                "pt": "msg",
+                "to": "test",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 1980,
+        "wires": [
+            [
+                "06ee1268326505c7"
+            ]
+        ]
+    },
+    {
+        "id": "2c0cf14930c9ee32",
+        "type": "mqtt in",
+        "z": "f0180303220ffef7",
+        "name": "8703 - Local outside temp attenuated",
+        "topic": "BSB-LAN/8703",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "4e15f386.2f0cfd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 210,
+        "y": 2040,
+        "wires": [
+            [
+                "91936e06cc1d9131"
+            ]
+        ]
+    },
+    {
+        "id": "abd49814fc35f8f7",
+        "type": "function",
+        "z": "f0180303220ffef7",
+        "name": "Set Tag/Value",
+        "func": "msg.measurement = '8703_outside_temp_attenuated';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 2040,
+        "wires": [
+            [
+                "96bf8777460283f7"
+            ]
+        ]
+    },
+    {
+        "id": "91936e06cc1d9131",
+        "type": "json",
+        "z": "f0180303220ffef7",
+        "name": "",
+        "property": "payload",
+        "action": "str",
+        "pretty": false,
+        "x": 490,
+        "y": 2040,
+        "wires": [
+            [
+                "dfd9859717519ab3"
+            ]
+        ]
+    },
+    {
+        "id": "dfd9859717519ab3",
+        "type": "change",
+        "z": "f0180303220ffef7",
+        "name": "string to obj",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "test",
+                "tot": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "payload",
+                "pt": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.temperature",
+                "pt": "msg",
+                "to": "test",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 2040,
+        "wires": [
+            [
+                "abd49814fc35f8f7"
+            ]
+        ]
+    },
+    {
+        "id": "d640fd66abe07ea5",
+        "type": "mqtt in",
+        "z": "f0180303220ffef7",
+        "name": "8830 - DHW temp top",
+        "topic": "BSB-LAN/8830",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "4e15f386.2f0cfd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 160,
+        "y": 2160,
+        "wires": [
+            [
+                "9e7dc719ddf40247"
+            ]
+        ]
+    },
+    {
+        "id": "90c3af415ed97146",
+        "type": "function",
+        "z": "f0180303220ffef7",
+        "name": "Set Tag/Value",
+        "func": "msg.measurement = '8830_dhw_temp_top';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 2160,
+        "wires": [
+            [
+                "96bf8777460283f7"
+            ]
+        ]
+    },
+    {
+        "id": "9e7dc719ddf40247",
+        "type": "json",
+        "z": "f0180303220ffef7",
+        "name": "",
+        "property": "payload",
+        "action": "str",
+        "pretty": false,
+        "x": 490,
+        "y": 2160,
+        "wires": [
+            [
+                "f1ccb86b8c2aec81"
+            ]
+        ]
+    },
+    {
+        "id": "f1ccb86b8c2aec81",
+        "type": "change",
+        "z": "f0180303220ffef7",
+        "name": "string to obj",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "test",
+                "tot": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "payload",
+                "pt": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.temperature",
+                "pt": "msg",
+                "to": "test",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 2160,
+        "wires": [
+            [
+                "90c3af415ed97146"
+            ]
+        ]
+    },
+    {
+        "id": "a1287fda0cc37f0a",
+        "type": "mqtt in",
+        "z": "f0180303220ffef7",
+        "name": "8831 - DHW current setpoint",
+        "topic": "BSB-LAN/8831",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "4e15f386.2f0cfd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 180,
+        "y": 2220,
+        "wires": [
+            [
+                "dcf566ff3782a269"
+            ]
+        ]
+    },
+    {
+        "id": "97826ca3d17af14e",
+        "type": "function",
+        "z": "f0180303220ffef7",
+        "name": "Set Tag/Value",
+        "func": "msg.measurement = '8831_dhw_current_setpoint';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 2220,
+        "wires": [
+            [
+                "96bf8777460283f7"
+            ]
+        ]
+    },
+    {
+        "id": "dcf566ff3782a269",
+        "type": "json",
+        "z": "f0180303220ffef7",
+        "name": "",
+        "property": "payload",
+        "action": "str",
+        "pretty": false,
+        "x": 490,
+        "y": 2220,
+        "wires": [
+            [
+                "32dfcde41f817329"
+            ]
+        ]
+    },
+    {
+        "id": "32dfcde41f817329",
+        "type": "change",
+        "z": "f0180303220ffef7",
+        "name": "string to obj",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "test",
+                "tot": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "payload",
+                "pt": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.temperature",
+                "pt": "msg",
+                "to": "test",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 2220,
+        "wires": [
+            [
+                "97826ca3d17af14e"
+            ]
+        ]
+    },
+    {
+        "id": "da94960428ebd018",
+        "type": "mqtt in",
+        "z": "f0180303220ffef7",
+        "name": "8744 - Flow temp setpoint",
+        "topic": "BSB-LAN/8744",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "4e15f386.2f0cfd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 170,
+        "y": 2340,
+        "wires": [
+            [
+                "466528dd492ad5b3"
+            ]
+        ]
+    },
+    {
+        "id": "d565147a28ce94b6",
+        "type": "function",
+        "z": "f0180303220ffef7",
+        "name": "Set Tag/Value",
+        "func": "msg.measurement = '8744_flow_temp_setpoint';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 2340,
+        "wires": [
+            [
+                "96bf8777460283f7"
+            ]
+        ]
+    },
+    {
+        "id": "466528dd492ad5b3",
+        "type": "json",
+        "z": "f0180303220ffef7",
+        "name": "",
+        "property": "payload",
+        "action": "str",
+        "pretty": false,
+        "x": 490,
+        "y": 2340,
+        "wires": [
+            [
+                "594c643a4b60b733"
+            ]
+        ]
+    },
+    {
+        "id": "594c643a4b60b733",
+        "type": "change",
+        "z": "f0180303220ffef7",
+        "name": "string to obj",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "test",
+                "tot": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "payload",
+                "pt": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.temperature",
+                "pt": "msg",
+                "to": "test",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 2340,
+        "wires": [
+            [
+                "d565147a28ce94b6"
+            ]
+        ]
+    },
+    {
+        "id": "64c3a3b872a36f6b",
+        "type": "mqtt in",
+        "z": "f0180303220ffef7",
+        "name": "8412 - Flow supply temp",
+        "topic": "BSB-LAN/8412",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "4e15f386.2f0cfd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 170,
+        "y": 2400,
+        "wires": [
+            [
+                "7724721f1d7f58ee"
+            ]
+        ]
+    },
+    {
+        "id": "d379602ce156f2a4",
+        "type": "function",
+        "z": "f0180303220ffef7",
+        "name": "Set Tag/Value",
+        "func": "msg.measurement = '8412_flow_supply_temp';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 2400,
+        "wires": [
+            [
+                "96bf8777460283f7"
+            ]
+        ]
+    },
+    {
+        "id": "7724721f1d7f58ee",
+        "type": "json",
+        "z": "f0180303220ffef7",
+        "name": "",
+        "property": "payload",
+        "action": "str",
+        "pretty": false,
+        "x": 490,
+        "y": 2400,
+        "wires": [
+            [
+                "02ea32d72a302818"
+            ]
+        ]
+    },
+    {
+        "id": "02ea32d72a302818",
+        "type": "change",
+        "z": "f0180303220ffef7",
+        "name": "string to obj",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "test",
+                "tot": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "payload",
+                "pt": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.temperature",
+                "pt": "msg",
+                "to": "test",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 2400,
+        "wires": [
+            [
+                "d379602ce156f2a4"
+            ]
+        ]
+    },
+    {
+        "id": "1d69a8ae082077ef",
+        "type": "mqtt in",
+        "z": "f0180303220ffef7",
+        "name": "8410 - Flow return temp",
+        "topic": "BSB-LAN/8410",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "4e15f386.2f0cfd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 160,
+        "y": 2460,
+        "wires": [
+            [
+                "c190f67d8c02d105"
+            ]
+        ]
+    },
+    {
+        "id": "3353d2f8ceb90e1f",
+        "type": "function",
+        "z": "f0180303220ffef7",
+        "name": "Set Tag/Value",
+        "func": "msg.measurement = '8410_flow_return_temp';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 2460,
+        "wires": [
+            [
+                "96bf8777460283f7"
+            ]
+        ]
+    },
+    {
+        "id": "c190f67d8c02d105",
+        "type": "json",
+        "z": "f0180303220ffef7",
+        "name": "",
+        "property": "payload",
+        "action": "str",
+        "pretty": false,
+        "x": 490,
+        "y": 2460,
+        "wires": [
+            [
+                "b97a74197aa6052b"
+            ]
+        ]
+    },
+    {
+        "id": "b97a74197aa6052b",
+        "type": "change",
+        "z": "f0180303220ffef7",
+        "name": "string to obj",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "test",
+                "tot": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "payload",
+                "pt": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.temperature",
+                "pt": "msg",
+                "to": "test",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 2460,
+        "wires": [
+            [
+                "3353d2f8ceb90e1f"
+            ]
+        ]
+    },
+    {
+        "id": "fbb33d287f8bb359",
+        "type": "mqtt in",
+        "z": "f0180303220ffef7",
+        "name": "8450 - Compressor operating hours",
+        "topic": "BSB-LAN/8450",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "4e15f386.2f0cfd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 200,
+        "y": 2600,
+        "wires": [
+            [
+                "1c2dff946d2d6d93"
+            ]
+        ]
+    },
+    {
+        "id": "89e7b801f9cf8b19",
+        "type": "function",
+        "z": "f0180303220ffef7",
+        "name": "Set Tag/Value",
+        "func": "msg.measurement = '8450_compressor_hours';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 2600,
+        "wires": [
+            [
+                "9cca5bd22d34757c"
+            ]
+        ]
+    },
+    {
+        "id": "1c2dff946d2d6d93",
+        "type": "json",
+        "z": "f0180303220ffef7",
+        "name": "",
+        "property": "payload",
+        "action": "str",
+        "pretty": false,
+        "x": 490,
+        "y": 2600,
+        "wires": [
+            [
+                "bf75ece7ed91230d"
+            ]
+        ]
+    },
+    {
+        "id": "9cca5bd22d34757c",
+        "type": "influxdb out",
+        "z": "f0180303220ffef7",
+        "influxdb": "8f15d5a71ce42ae7",
+        "name": "Output to InfluxDB",
+        "measurement": "",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1150,
+        "y": 2600,
+        "wires": []
+    },
+    {
+        "id": "bf75ece7ed91230d",
+        "type": "change",
+        "z": "f0180303220ffef7",
+        "name": "string to obj",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "test",
+                "tot": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "payload",
+                "pt": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.hours",
+                "pt": "msg",
+                "to": "test",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 2600,
+        "wires": [
+            [
+                "89e7b801f9cf8b19"
+            ]
+        ]
+    },
+    {
+        "id": "c6fa93b781ec5d24",
+        "type": "mqtt in",
+        "z": "f0180303220ffef7",
+        "name": "8451 - Compressor starts",
+        "topic": "BSB-LAN/8451",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "4e15f386.2f0cfd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 170,
+        "y": 2660,
+        "wires": [
+            [
+                "41e334f009b9cf47"
+            ]
+        ]
+    },
+    {
+        "id": "432228ee65cd5af3",
+        "type": "function",
+        "z": "f0180303220ffef7",
+        "name": "Set Tag/Value",
+        "func": "msg.measurement = '8451_compressor_starts';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 2660,
+        "wires": [
+            [
+                "9cca5bd22d34757c"
+            ]
+        ]
+    },
+    {
+        "id": "41e334f009b9cf47",
+        "type": "json",
+        "z": "f0180303220ffef7",
+        "name": "",
+        "property": "payload",
+        "action": "str",
+        "pretty": false,
+        "x": 490,
+        "y": 2660,
+        "wires": [
+            [
+                "b43fcd4015f01d07"
+            ]
+        ]
+    },
+    {
+        "id": "b43fcd4015f01d07",
+        "type": "change",
+        "z": "f0180303220ffef7",
+        "name": "string to obj",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "test",
+                "tot": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "payload",
+                "pt": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.starts",
+                "pt": "msg",
+                "to": "test",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 2660,
+        "wires": [
+            [
+                "432228ee65cd5af3"
+            ]
+        ]
+    },
+    {
+        "id": "0624adc7311507ec",
+        "type": "mqtt in",
+        "z": "f0180303220ffef7",
+        "name": "8336 - Heatpump operating hours",
+        "topic": "BSB-LAN/8336",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "4e15f386.2f0cfd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 190,
+        "y": 2720,
+        "wires": [
+            [
+                "915cd7b4f061b9d7"
+            ]
+        ]
+    },
+    {
+        "id": "240d6e8b9c2ad245",
+        "type": "function",
+        "z": "f0180303220ffef7",
+        "name": "Set Tag/Value",
+        "func": "msg.measurement = '8336_heatpump_hours';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 2720,
+        "wires": [
+            [
+                "9cca5bd22d34757c"
+            ]
+        ]
+    },
+    {
+        "id": "915cd7b4f061b9d7",
+        "type": "json",
+        "z": "f0180303220ffef7",
+        "name": "",
+        "property": "payload",
+        "action": "str",
+        "pretty": false,
+        "x": 490,
+        "y": 2720,
+        "wires": [
+            [
+                "ea0d1603fdddca9a"
+            ]
+        ]
+    },
+    {
+        "id": "ea0d1603fdddca9a",
+        "type": "change",
+        "z": "f0180303220ffef7",
+        "name": "string to obj",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "test",
+                "tot": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "payload",
+                "pt": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.hours",
+                "pt": "msg",
+                "to": "test",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 2720,
+        "wires": [
+            [
+                "240d6e8b9c2ad245"
+            ]
+        ]
+    },
+    {
+        "id": "29ee5f8e1f09c7c1",
+        "type": "mqtt in",
+        "z": "f0180303220ffef7",
+        "name": "8000 - Heating 1 status",
+        "topic": "BSB-LAN/8000",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "4e15f386.2f0cfd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 160,
+        "y": 2860,
+        "wires": [
+            [
+                "421bdda708cb61bd"
+            ]
+        ]
+    },
+    {
+        "id": "94792179eefb32c9",
+        "type": "function",
+        "z": "f0180303220ffef7",
+        "name": "Set Tag/Value",
+        "func": "msg.measurement = '8000_heating_status';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 2860,
+        "wires": [
+            [
+                "9cca5bd22d34757c"
+            ]
+        ]
+    },
+    {
+        "id": "421bdda708cb61bd",
+        "type": "json",
+        "z": "f0180303220ffef7",
+        "name": "",
+        "property": "payload",
+        "action": "str",
+        "pretty": false,
+        "x": 490,
+        "y": 2860,
+        "wires": [
+            [
+                "94792179eefb32c9"
+            ]
+        ]
+    },
+    {
+        "id": "a477b4cfd7e68e18",
+        "type": "mqtt in",
+        "z": "f0180303220ffef7",
+        "name": "8003 - DHW status",
+        "topic": "BSB-LAN/8003",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "4e15f386.2f0cfd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 150,
+        "y": 2920,
+        "wires": [
+            [
+                "ec2ce91f94fbcfaa"
+            ]
+        ]
+    },
+    {
+        "id": "b7137770665a7744",
+        "type": "function",
+        "z": "f0180303220ffef7",
+        "name": "Set Tag/Value",
+        "func": "msg.measurement = '8003_dhw_status';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 2920,
+        "wires": [
+            [
+                "9cca5bd22d34757c"
+            ]
+        ]
+    },
+    {
+        "id": "ec2ce91f94fbcfaa",
+        "type": "json",
+        "z": "f0180303220ffef7",
+        "name": "",
+        "property": "payload",
+        "action": "str",
+        "pretty": false,
+        "x": 490,
+        "y": 2920,
+        "wires": [
+            [
+                "b7137770665a7744"
+            ]
+        ]
+    },
+    {
+        "id": "69b6cd78256a3872",
+        "type": "mqtt in",
+        "z": "f0180303220ffef7",
+        "name": "8006 - Heating 1 status",
+        "topic": "BSB-LAN/8006",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "4e15f386.2f0cfd",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 160,
+        "y": 2980,
+        "wires": [
+            [
+                "27c6a3d4c017836c"
+            ]
+        ]
+    },
+    {
+        "id": "7a5aae9f32053dd7",
+        "type": "function",
+        "z": "f0180303220ffef7",
+        "name": "Set Tag/Value",
+        "func": "msg.measurement = '8006_heatpump_status';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 2980,
+        "wires": [
+            [
+                "9cca5bd22d34757c"
+            ]
+        ]
+    },
+    {
+        "id": "27c6a3d4c017836c",
+        "type": "json",
+        "z": "f0180303220ffef7",
+        "name": "",
+        "property": "payload",
+        "action": "str",
+        "pretty": false,
+        "x": 490,
+        "y": 2980,
+        "wires": [
+            [
+                "7a5aae9f32053dd7"
+            ]
+        ]
+    },
+    {
+        "id": "4e15f386.2f0cfd",
+        "type": "mqtt-broker",
+        "name": "MQTT Server",
+        "broker": "replaceme",
+        "port": "1883",
+        "clientid": "Node-Red",
+        "usetls": false,
+        "compatmode": false,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "8f15d5a71ce42ae7",
+        "type": "influxdb",
+        "hostname": "replaceme",
+        "port": "8086",
+        "protocol": "http",
+        "database": "heatpump",
+        "name": "InfluxDB - Heatpump",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "1.x",
+        "url": "http://localhost:8086",
+        "rejectUnauthorized": true
+    }
+]
